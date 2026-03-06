@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <title>Biospeckle — Minha Versão</title>
-  </head>
-  <body>
-    <h1>Biospeckle Tool</h1>
-    <p>Análise de imagens.</p>
-   </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Primeiro App</title>
+  <style>
+    body { background: #f0f0f0; font-family: Arial; text-align: center; }
+    .botao { padding: 10px 20px; background: blue; color: white; border: none; cursor: pointer; }
+    .botao.vermelho { background: red; }
+  </style>
+</head>
+<body>
+  <h1>Olá, Edmilson!</h1>
+  <button class="botao" id="meuBotao">Clique em mim</button>
+
+  <script>
+    const botao = document.getElementById('meuBotao');
+    botao.addEventListener('click', function() {
+      botao.classList.toggle('vermelho');
+      botao.textContent = botao.classList.contains('vermelho') ? 'Agora vermelho!' : 'Clique em mim';
+    });
+  </script>
+</body>
 </html>
